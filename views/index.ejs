@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Express</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+<body>
+  <h1><i class="fas fa-dragon"> </i>All Men Must Die, But We Are Not Men<i class="fas fa-dragon"> </i> </h1>
+
+  <ul class="quotes">
+  <% for(var i=0; i<quotes.length; i++) {%>
+    <li class="quote">
+      <span><%= quotes[i].name %></span>
+      <span><%= quotes[i].quote %></span>
+    </li>
+  <% } %>
+  </ul>
+<!-- Using the form and "action" attribute to activate put request -->
+  <form action="/quotes" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="quote" name="quote">
+    <button type="submit">Submit</button>
+  </form>
+
+<!-- Using main.js and linking it to ejs to activate the put request -->
+  <div>
+  <h2>Replace the House with a surprise from Queen Dany</h2>
+  <button id="update"> Dany says: </button>
+  </div>
+
+<!-- USING a delete button  -->
+<div>
+  <h2>Remove the carnage</h2>
+  <button id="delete"> Delete the tormoil </button>
+</div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: grey;
+  color: white;
+  text-align: center;
+}
+
+button {
+  background: pink;
+
+}
